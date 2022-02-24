@@ -1,6 +1,6 @@
 <template>
-    <div>
-        
+    <div class="container-right">
+        <img draggable="false" src="@/assets/logoBranco.png" alt="Logo Compass">
     </div>
 </template>
 
@@ -10,6 +10,6 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
+@import "./loginRight.scss";
 </style>

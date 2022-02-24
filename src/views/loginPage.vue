@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="login-page">
       <loginLeft />
       <loginRight />
   </div>
@@ -19,5 +19,8 @@ export default {
 </script>
 
 <style>
-
+.login-page {
+    display: flex;
+    height: 100vh;
+}
 </style>
