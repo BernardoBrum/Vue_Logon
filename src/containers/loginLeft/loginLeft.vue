@@ -3,8 +3,10 @@
     <div class="container">
       <div class="login-tittle">
         <Title :level="1" text="Olá," />
-        <TextContent text="Para continuar navegando de forma" />
-        <TextContent text="segura, efetue o login na rede." />
+        <div>
+          <TextContent text="Para continuar navegando de forma" />
+          <TextContent text="segura, efetue o login na rede." />
+        </div>
       </div>
       <div class="login-container">
         <Title :level="2" text="Login"/>
@@ -38,6 +40,6 @@ export default {
 
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 @import "./loginLeft.scss";
 </style>

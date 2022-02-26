@@ -1,0 +1,15 @@
+.input {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  color: #E0E0E0;
+
+  &::placeholder {
+        color: #E0E0E0;
+        font-size: 15px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
