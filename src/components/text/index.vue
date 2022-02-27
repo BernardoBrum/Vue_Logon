@@ -1,6 +1,7 @@
 <template>
   <div>
-    <p>{{ text }}</p>
+    <p v-if="level === 1">{{ text }}</p>
+    <p v-if="level === 2" class="content-p">{{ text }}</p>
   </div>
 </template>
 
@@ -11,6 +12,11 @@ export default {
   props: {
     text: {
       type: String,
+    },
+
+    level: {
+      type: Number,
+      required: true,
     },
   },
 };

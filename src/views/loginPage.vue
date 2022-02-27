@@ -1,26 +1,26 @@
 <template>
   <div class="login-page">
-      <loginLeft />
-      <loginRight />
+    <LoginLeft />
+    <LoginRight />
   </div>
 </template>
 
 <script>
-import loginLeft from "@/containers/loginLeft/loginLeft.vue"
-import loginRight from "@/containers/loginRight/loginRight.vue"
+import LoginLeft from "@/containers/loginLeft/index.vue";
+import LoginRight from "@/containers/loginRight/index.vue";
 
 export default {
-    name: "loginPage",
-    components: {
-        loginLeft,
-        loginRight
-    }
-}
+  name: "loginPage",
+  components: {
+    LoginLeft,
+    LoginRight,
+  },
+};
 </script>
 
 <style>
 .login-page {
-    display: flex;
-    height: 100vh;
+  display: flex;
+  height: 100vh;
 }
 </style>

@@ -1,0 +1,25 @@
+.header {
+  color: #222222;
+  display: flex;
+  justify-content: space-between;
+  height: 20vh;
+}
+
+.logo {
+  padding: 1% 2%;
+}
+
+.clock {
+  padding-top: 2.5%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.clock-hours {
+  line-height: 6.5em;
+}
+
+.weather {
+  padding: 1% 2%;
+}

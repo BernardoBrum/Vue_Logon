@@ -1,0 +1,25 @@
+.content {
+  display: flex;
+  height: 80vh;
+  line-height: clamp(1em, 2.7vw, 3.5em);
+  justify-content: space-between;
+  text-align: end;
+}
+
+.globe {
+  height: 76vh;
+}
+
+.text-content {
+  height: fit-content;
+  margin: 6% 6% 0 0;
+}
+
+.title {
+  color: #c12d18;
+}
+
+.paragraph {
+  color: #222222;
+  font-size: 24px;
+}

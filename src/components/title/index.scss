@@ -1,9 +1,31 @@
 h1 {
-    font-size: 60px;
-    font-weight: 300;
+  font-size: 60px;
+  font-weight: 300;
 }
 
 h2 {
-    font-size: 30px;
-    font-weight: 200;
+  font-size: 30px;
+  font-weight: 200;
+}
+
+h3 {
+  font-size: 144px;
+  font-weight: 600;
+}
+
+h4 {
+  font-weight: 600;
+  line-height: 0.5em;
+  font-size: clamp(1em, 2vw, 2.5em);
+}
+
+h5 {
+  font-weight: 600;
+  font-size: clamp(1em, 3.2vw, 4.5em);
+}
+
+h6 {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 0.8em;
 }

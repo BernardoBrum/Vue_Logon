@@ -1,0 +1,13 @@
+.container-right {
+  display: flex;
+  justify-content: center;
+  background-image: url("../../assets/fundoLogin.png");
+  background-size: cover;
+  width: 50vw;
+  height: 100vh;
+}
+
+img {
+  margin-top: 3%;
+  height: fit-content;
+}
