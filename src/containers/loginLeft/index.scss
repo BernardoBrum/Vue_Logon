@@ -61,3 +61,39 @@
   padding: 4%;
   border-radius: 30px;
 }
+
+.logo-mobile {
+  display: none;
+}
+
+@media (max-width: 960px) {
+  .container-left {
+    width: 100%;
+  }
+
+  .container {
+    width: 80%;
+    height: 85%;
+  }
+
+  .logo-mobile {
+    display: block;
+    height: 5vh;
+    
+    img {
+      position: absolute;
+      height: 8vh;
+      right: 0;
+    }
+  }
+}
+
+@media (max-height: 900px) {
+  .container {
+    height: 95%;
+  }
+
+  .login-container {
+    height: 35%;
+  }
+}

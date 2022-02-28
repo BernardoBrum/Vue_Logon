@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <div>
+    <div class="globe-container">
       <img
         class="globe"
         draggable="false"

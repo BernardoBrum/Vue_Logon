@@ -82,3 +82,50 @@
   align-items: center;
   justify-content: center;
 }
+
+@media (max-width: 1260px) {
+  .stay {
+    width: 35%;
+  }
+
+  .logout {
+    width: 35%;
+  }
+}
+
+@media (max-width: 960px) {
+  .left-container {
+    display: none;
+  }
+
+  .right-container {
+    width: 100%;
+  }
+
+  .timer {
+    display: none;
+  }
+
+  .buttons{
+    width: 100%;
+    flex-direction: row-reverse;
+  }
+
+  .stay {
+    width: 80%;
+  }
+
+  .logout {
+    width: 20%;
+  }
+}
+
+@media (max-height: 768px) {
+  .phrase-container {
+    font-size: 10px;
+  }
+
+  .timer {
+    font-size: 10px;
+  }
+}

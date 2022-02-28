@@ -1,13 +1,14 @@
 .content {
   display: flex;
   height: 80vh;
-  line-height: clamp(1em, 2.7vw, 3.5em);
+  line-height: 3em;
   justify-content: space-between;
   text-align: end;
 }
 
 .globe {
   height: 76vh;
+  min-width: 100%;
 }
 
 .text-content {
@@ -22,4 +23,20 @@
 .paragraph {
   color: #222222;
   font-size: 24px;
+}
+
+@media (max-width:960px) {
+  .text-content {
+    display: none;
+  }
+
+  .globe {
+    max-width: 100%;
+  }
+}
+
+@media (max-width:440px) {
+  .globe-container {
+    max-width: 90%;
+  }
 }

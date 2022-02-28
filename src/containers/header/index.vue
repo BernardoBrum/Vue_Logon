@@ -9,7 +9,10 @@
     </div>
     <div class="weather">
       <p>Passo Fundo - RS</p>
-      <h1>22º</h1>
+      <div class="weather-container">
+        <img src="@/assets/icons/cloud.png" alt="">
+        <h1 class="weather-title">22º</h1>
+      </div>
     </div>
   </div>
 </template>

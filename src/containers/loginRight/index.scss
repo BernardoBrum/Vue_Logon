@@ -11,3 +11,9 @@ img {
   margin-top: 3%;
   height: fit-content;
 }
+
+@media (max-width: 960px) {
+  .container-right {
+    display: none;
+  }
+}

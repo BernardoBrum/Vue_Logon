@@ -1,6 +1,7 @@
 <template>
   <div class="container-left">
     <div class="container">
+      <div class="logo-mobile"><img src="../../assets/logoBranco.png" alt="Logo Compasso"></div>
       <div class="login-tittle">
         <Title :level="1" text="Olá," />
         <div>

@@ -7,18 +7,24 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/login',
+    path: '/',
     name: 'login',
-    component: loginPage
+    component: loginPage,
+    meta:{    
+      title: "Login - Compass"
+    }
   },
   {
     path: '/home',
     name: 'home',
-    component: homePage
+    component: homePage,
+    meta:{    
+      title: "Home - Compass",
+    }
+    }
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-  }
 ]
 
 const router = new VueRouter({
