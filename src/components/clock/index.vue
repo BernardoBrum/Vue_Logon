@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <TextContent :level="5" :text="clockHours" />
-    <TextContent :level="4" :text="clockDate" />
+  <div class="clock">
+    <TextContent :level="1" class="clock-hours" :text="clockHours" />
+    <TextContent :level="1" class="clock-date" :text="clockDate" />
   </div>
 </template>
 
@@ -48,7 +48,7 @@ export default {
       let year = date.getFullYear();
       this.year = year;
 
-      this.clockHours = `${hours < 10 ? "0" : ""}${hours}:${minute}${minute < 10 ? "0" : ""}`
+      this.clockHours = `${hours < 10 ? "0" : ""}${hours}:${minute < 10 ? "0" : ""}${minute}`
       this.weekDay = `${weekDay[week]}`
       this.monthYear = `${monthYear[month]}`
       this.clockDate = `${weekDay[week]}, ${day} de ${monthYear[month]} de ${year}`
@@ -64,7 +64,7 @@ export default {
 
 </script>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
 @import "./index.scss";
 </style>
 

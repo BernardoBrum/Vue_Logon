@@ -7,21 +7,24 @@
       <Clock />
     </div>
     <div class="weather">
-      <p>Passo Fundo - RS</p>
-      <div class="weather-container">
-        <img draggable="false" src="@/assets/icons/cloud.png" alt="Ícone Clima">
-        <h1 class="weather-title">22º</h1>
-      </div>
+      <Weather />
     </div>
   </div>
 </template>
 
 <script>
-import Clock from "@/components/clock/index.vue"
+import Weather from "@/components/weather/index.vue";
+import Clock from "@/components/clock/index.vue";
 
 export default {
   components: {
     Clock,
+    Weather,
+  },
+
+  created() {
+    const title = document.getElementById("window-title");
+    title.innerText = "Home - Compass";
   },
 };
 </script>

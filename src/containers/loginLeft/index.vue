@@ -1,7 +1,9 @@
 <template>
   <div class="container-left">
     <div class="container">
-      <div class="logo-mobile"><img src="@/assets/logoBranco.png" alt="Logo Compasso"></div>
+      <div class="logo-mobile">
+        <img src="@/assets/logoBranco.png" alt="Logo Compasso" />
+      </div>
       <div class="login-tittle">
         <Title :level="1" text="Olá," />
         <div>
@@ -28,8 +30,11 @@
           />
         </div>
         <div>
-          <TextContent :level="3" text="Ops, usuário ou senha inválidos."/>
-          <TextContent :level="3" text="Tente novamente!"/>
+          <TextContent
+            class="error-msg"
+            text="Ops, usuário ou senha inválidos."
+          />
+          <TextContent class="error-msg" text="Tente novamente!" />
         </div>
       </div>
       <button>Continuar</button>
@@ -43,15 +48,18 @@ import TextContent from "@/components/text/index.vue";
 import Input from "@/components/input/index.vue";
 
 export default {
-
   components: {
     Title,
     TextContent,
     Input,
   },
 
-  methods: {
-  }
+  methods: {},
+
+  created() {
+    const title = document.getElementById("window-title");
+    title.innerText = "Login - Compass";
+  },
 };
 </script>
 

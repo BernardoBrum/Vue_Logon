@@ -10,13 +10,13 @@
     </div>
     <div class="text-content">
       <Title class="title" :level="3" text="Our mission is" />
-      <TextContent :level="2" class="paragraph" text="Nossa missão é" />
+      <TextContent class="paragraph" text="Nossa missão é" />
       <Title class="title" :level="4" text="to transform the world" />
-      <TextContent :level="2" class="paragraph" text="transformar o mundo" />
+      <TextContent class="paragraph" text="transformar o mundo" />
       <Title class="title" :level="4" text="building digital experiences" />
-      <TextContent :level="2" class="paragraph" text="construindo experiências digitais" />
+      <TextContent class="paragraph" text="construindo experiências digitais" />
       <Title class="title" :level="4" text="that enable our client’s growth" />
-      <TextContent :level="2" class="paragraph" text="que permitam o crescimento dos nossos clientes" />
+      <TextContent class="paragraph" text="que permitam o crescimento dos nossos clientes" />
     </div>
   </div>
 </template>

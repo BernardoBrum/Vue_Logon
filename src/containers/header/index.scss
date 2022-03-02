@@ -14,27 +14,7 @@
 }
 
 .weather {
-  display: flex;
-  flex-direction: column;
   padding: 1% 2%;
-}
-
-.weather-container {
-  display: flex;
-  height: 30%;
-  justify-content: center;
-  align-items: center;
-  padding: 4%;
-
-  img {
-    margin-right: 6%;
-    height: 75%;
-  }
-}
-
-.weather-title {
-  font-size: 48px;
-  font-weight: 600;
 }
 
 @media (max-width: 960px) {

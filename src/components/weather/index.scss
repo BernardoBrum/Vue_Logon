@@ -1,0 +1,22 @@
+.weather {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.weather-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    margin-right: 6%;
+    height: 3.5vh;
+  }
+}
+
+.weather-title {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1;
+}

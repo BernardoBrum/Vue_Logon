@@ -49,11 +49,17 @@
   padding-right: 10%;
 }
 
-.timer-counter {
+.timer-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.timer-number {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 0.8em;
 }
 
 .buttons {

@@ -11,8 +11,8 @@
           <TextContent :level="1" text="Aplication" />
           <TextContent :level="1" text="refresh in" />
         </div>
-        <div class="timer-counter">
-          <Title :level="6" text="600" />
+        <div class="timer-container">
+          <TextContent class="timer-number" text="600" />
           <TextContent :level="1" text="seconds" />
         </div>
       </div>
@@ -31,12 +31,10 @@
 
 <script>
 import TextContent from "@/components/text/index.vue";
-import Title from "@/components/title/index.vue";
 
 export default {
   components: {
     TextContent,
-    Title,
   },
 };
 </script>
