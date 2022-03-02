@@ -1,7 +1,7 @@
 <template>
   <div class="container-left">
     <div class="container">
-      <div class="logo-mobile"><img src="../../assets/logoBranco.png" alt="Logo Compasso"></div>
+      <div class="logo-mobile"><img src="@/assets/logoBranco.png" alt="Logo Compasso"></div>
       <div class="login-tittle">
         <Title :level="1" text="Olá," />
         <div>
@@ -15,7 +15,7 @@
           <Input placeholder="Usuário" class="user" type="text" />
           <img
             draggable="false"
-            src="../../assets/iconeUsuario.png"
+            src="@/assets/iconeUsuario.png"
             alt="Ícone Usuário"
           />
         </div>
@@ -23,9 +23,13 @@
           <Input placeholder="Senha" type="password" />
           <img
             draggable="false"
-            src="../../assets/iconeSenha.png"
+            src="@/assets/iconeSenha.png"
             alt="Ícone Senha"
           />
+        </div>
+        <div>
+          <TextContent :level="3" text="Ops, usuário ou senha inválidos."/>
+          <TextContent :level="3" text="Tente novamente!"/>
         </div>
       </div>
       <button>Continuar</button>
@@ -39,11 +43,15 @@ import TextContent from "@/components/text/index.vue";
 import Input from "@/components/input/index.vue";
 
 export default {
+
   components: {
     Title,
     TextContent,
     Input,
   },
+
+  methods: {
+  }
 };
 </script>
 

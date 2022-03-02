@@ -1,16 +1,15 @@
 <template>
   <div class="header">
     <div class="logo">
-      <img src="@/assets/logoPreto.png" alt="" />
+      <img draggable="false" src="@/assets/logoPreto.png" alt="Logo Compasso" />
     </div>
     <div class="clock">
-      <Title class="clock-hours" :level="3" text="11:26" />
-      <TextContent :level="1" text="terça-feira, 17 de março de 2020" />
+      <Clock />
     </div>
     <div class="weather">
       <p>Passo Fundo - RS</p>
       <div class="weather-container">
-        <img src="@/assets/icons/cloud.png" alt="">
+        <img draggable="false" src="@/assets/icons/cloud.png" alt="Ícone Clima">
         <h1 class="weather-title">22º</h1>
       </div>
     </div>
@@ -18,13 +17,11 @@
 </template>
 
 <script>
-import Title from "@/components/title/index.vue";
-import TextContent from "@/components/text/index.vue";
+import Clock from "@/components/clock/index.vue"
 
 export default {
   components: {
-    Title,
-    TextContent,
+    Clock,
   },
 };
 </script>
