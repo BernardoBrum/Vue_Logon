@@ -65,7 +65,7 @@ export default {
   methods: {
     Login() {
       if(this.user === "admin" && this.password === "admin") {
-        Router.push("/home")
+        Router.push({name:"home"})
       } else {
       this.loginError = true
       }
