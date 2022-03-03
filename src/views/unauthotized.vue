@@ -1,5 +1,5 @@
 <template>
-      <Unauthotized />
+      <Unauthorized />
 </template>
 
 <script>

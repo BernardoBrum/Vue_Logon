@@ -2,7 +2,8 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import loginPage from "@/views/loginPage.vue";
 import homePage from "@/views/homePage.vue";
-import notFound from "@/views/notFound.vue"
+import notFound from "@/views/notFound.vue";
+//import unauthorized from "@/views/unauthorized.vue";
 
 Vue.use(VueRouter);
 
@@ -18,11 +19,11 @@ const routes = [
     component: homePage,
   },
 
-    {
-      path: "*",
-      name: "notFound",
-      component: notFound,
-    },
+  {
+    path: "*",
+    name: "notFound",
+    component: notFound,
+  },
 
   {
     path: "/",
