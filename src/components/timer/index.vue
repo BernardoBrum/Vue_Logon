@@ -1,10 +1,11 @@
 <template>
   <div>
-      <TextContent class="timer-number" :number="counter" />
+      <TextContent class="timer-number" :text="counter" />
   </div>
 </template>
 
 <script>
+import Router from "@/router/index.js"
 import TextContent from "@/components/text/index.vue"
 
 export default {
@@ -16,19 +17,22 @@ export default {
 
     data(){
         return{
-            counter: ""
+            counter: 600
         }
     },
 
     methods: {
         timer() {
-            this.counter--;
+            if (this.counter) {
+                this.counter--
+            } if (this.counter == 1){
+                Router.push("/login")
+            }
         }
     },
 
     created() {
         setInterval(() => {
-            this.counter = 600
             this.timer()
         },1000);
     },

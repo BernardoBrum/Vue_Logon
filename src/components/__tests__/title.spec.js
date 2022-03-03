@@ -5,6 +5,6 @@ describe("Title component", () => {
   test("Teste 01", () => {
     const wrapper = shallowMount(Title);
 
-    expect(wrapper.contains('h1','h2','h3','h4')).toBe(true);
+    expect(wrapper.contains('h5')).toBe(true);
   });
 });
