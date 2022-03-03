@@ -2,7 +2,7 @@
   <div class="weather">
     <TextContent class="city" :text="showLocal" />
     <div class="weather-container">
-      <img draggable="false" :src="require(`@/assets/icons/${icon}.png`)" alt="Ícone Clima"/>
+      <img draggable="false" :src="require(`@/assets/icons/${icon}`)" alt="Ícone Clima"/>
       <TextContent class="weather-title" :text="temperature" />
     </div>
   </div>

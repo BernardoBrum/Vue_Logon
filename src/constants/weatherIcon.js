@@ -2,17 +2,17 @@ export function weatherIcon(text) {
   let icon = ""
 
     if (text.includes("thunder") && text.includes("rain")) {
-      icon = "storm";
+      icon = "storm.png";
     } else if (text.includes("thunder")) {
-      icon = "thunder";
+      icon = "thunder.png";
     } else if (text.includes("rain") || text.includes("drizzle")) {
-      icon = "raining";
+      icon = "raining.png";
     } else if (text.includes("Fog") || text.includes("Mist")) {
-      icon = "cloud";
+      icon = "cloud.png";
     } else if (text.includes("cloudy") || text.includes("Overcast") || text.includes("Cloudy")) {
-      icon = "cloudy";
+      icon = "cloudy.png";
     } else if (text.includes("Sunny") || text.includes("Clear")) {
-      icon = "sun";
+      icon = "sun.png";
     }
     return icon;
   }

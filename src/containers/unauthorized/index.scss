@@ -1,0 +1,38 @@
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error-type {
+  font-size: 150px;
+  color: #5b5b5f;
+}
+
+.unauthorized {
+  font-size: 50px;
+  color: #5b5b5f;
+}
+
+.message {
+  font-size: 25px;
+  color: #5b5b5f;
+}
+
+@media (max-width: 960px) {
+    img {
+        height: 50vh;
+    }
+
+    .error-type {
+        font-size: 100px;
+    }
+
+    .unauthorized {
+        font-size: 40px;
+    }
+
+    .message {
+        font-size: 15px;
+    }
+}
