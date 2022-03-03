@@ -10,8 +10,8 @@
 
 <script>
 import TextContent from "@/components/text/index.vue";
-import {states} from "@/constants/states.js"
-//import {weatherIcon} from "@/constants/weatherIcon.js"
+import { states } from "@/constants/states.js";
+//import { weatherIcon } from "@/constants/weatherIcon.js"
 
 export default {
   name: "Weather",
@@ -37,13 +37,26 @@ export default {
       )
         .then((answer) => answer.json())
         .then((data) => {
-            this.localization = data.location.name;
-            this.region = states(data.location.region);
-            this.showLocal = `${this.localization} - ${this.region}`
-            this.temperature = data.current.temp_c.toFixed() + "º";
-            this.icon = data.current.condition.text;
+          this.temperature = data.current.temp_c.toFixed() + "º";
+          this.icon = data.current.condition.text;
         });
 
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+          let latitude = position.coords.latitude
+          let longitude = position.coords.longitude
+
+          fetch(
+            `https://us1.locationiq.com/v1/reverse.php?key=pk.da18a87b007213afdf2bfcb68688bf43&lat=${latitude}&lon=${longitude}&format=json`
+          )
+            .then((answer) => answer.json())
+            .then((data) => {
+              this.city = data.address.town;
+              this.state = states(data.address.state);
+              this.showLocal = `${this.city} - ${this.state}`
+            });
+        });
+      }
     },
   },
 
