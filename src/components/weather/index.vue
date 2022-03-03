@@ -1,8 +1,8 @@
 <template>
   <div class="weather">
-    <TextContent :text="showLocal" />
+    <TextContent class="city" :text="showLocal" />
     <div class="weather-container">
-      <img draggable="false" src="@/assets/icons/cloud.png" />
+      <img draggable="false" :src="require(`@/assets/icons/${icon}.png`)" alt="Ícone Clima"/>
       <TextContent class="weather-title" :text="temperature" />
     </div>
   </div>
@@ -11,7 +11,7 @@
 <script>
 import TextContent from "@/components/text/index.vue";
 import { states } from "@/constants/states.js";
-//import { weatherIcon } from "@/constants/weatherIcon.js"
+import { weatherIcon } from "@/constants/weatherIcon.js"
 
 export default {
   name: "Weather",
@@ -20,8 +20,8 @@ export default {
     return {
       localization: "",
       region: "",
-      showLocal: "",
       temperature: "",
+      showLocal: "",
       icon: "",
     };
   },
@@ -38,7 +38,8 @@ export default {
         .then((answer) => answer.json())
         .then((data) => {
           this.temperature = data.current.temp_c.toFixed() + "º";
-          this.icon = data.current.condition.text;
+          let text = data.current.condition.text;
+          this.icon = weatherIcon(text)
         });
 
       if (navigator.geolocation) {

@@ -1,16 +1,18 @@
-export function weatherIcon(icon, text) {
+export function weatherIcon(text) {
+  let icon = ""
+
     if (text.includes("thunder") && text.includes("rain")) {
-      icon = "@/assets/icons/storm.png";
+      icon = "storm";
     } else if (text.includes("thunder")) {
-      icon = "@/assets/icons/thunder.png";
-    } else if (text.includes("rain")) {
-      icon = "@/assets/icons/raining.png";
+      icon = "thunder";
+    } else if (text.includes("rain") || text.includes("drizzle")) {
+      icon = "raining";
     } else if (text.includes("Fog") || text.includes("Mist")) {
-      icon = "@/assets/icons/cloud.png";
-    } else if (text.includes("Cloudy") || text.includes("Overcast")) {
-      icon = "./assets/icons/cloudy.png";
-    } else if (text.includes("Sunny")) {
-      icon = "@/assets/icons/sun.png";
+      icon = "cloud";
+    } else if (text.includes("cloudy") || text.includes("Overcast") || text.includes("Cloudy")) {
+      icon = "cloudy";
+    } else if (text.includes("Sunny") || text.includes("Clear")) {
+      icon = "sun";
     }
     return icon;
   }

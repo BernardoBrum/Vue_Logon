@@ -31,10 +31,10 @@
         </div>
         <div>
           <TextContent
-            class="error-msg"
+            class="error"
             text="Ops, usuário ou senha inválidos."
           />
-          <TextContent class="error-msg" text="Tente novamente!" />
+          <TextContent class="error" text="Tente novamente!" />
         </div>
       </div>
       <button>Continuar</button>

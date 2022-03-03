@@ -21,6 +21,8 @@
   width: 40%;
 
   button {
+    position: relative;
+    bottom: 8%;
     background: linear-gradient(90deg, #ff2d04 0%, #c13216 100%);
     border: none;
     padding: 6%;
@@ -63,12 +65,13 @@
   border-radius: 30px;
 }
 
-.error-msg {
+.error {
   position: relative;
   color: #e9b425;
   font-weight: bold;
   font-size: 15px;
   text-align: center;
+  visibility: hidden;
 }
 
 
