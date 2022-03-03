@@ -13,7 +13,7 @@
       </div>
       <div class="login-container">
         <Title :level="2" text="Login" />
-        <div class="user-box">
+        <div class="user-box" :class="{borderError:loginError}">
           <Input placeholder="Usuário" class="user" type="text" />
           <img
             draggable="false"
@@ -21,7 +21,7 @@
             alt="Ícone Usuário"
           />
         </div>
-        <div class="password-box">
+        <div class="password-box" :class="{borderError:loginError}">
           <Input placeholder="Senha" type="password" />
           <img
             draggable="false"
@@ -31,30 +31,51 @@
         </div>
         <div>
           <TextContent
-            class="error"
+            class="error" :class="{errorVisible:loginError}"
             text="Ops, usuário ou senha inválidos."
           />
-          <TextContent class="error" text="Tente novamente!" />
+          <TextContent class="error" :class="{errorVisible:loginError}" text="Tente novamente!" />
         </div>
       </div>
-      <button>Continuar</button>
+      <button @click="Login()">Continuar</button>
     </div>
   </div>
 </template>
 
 <script>
+import Router from "@/router/index.js"
 import Title from "@/components/title/index.vue";
 import TextContent from "@/components/text/index.vue";
 import Input from "@/components/input/index.vue";
+import { mapState } from 'vuex';
 
 export default {
+  data() {
+    return {
+      loginError: false
+    }
+  },
+  
   components: {
     Title,
     TextContent,
     Input,
   },
 
-  methods: {},
+  methods: {
+    Login() {
+      if(this.user === "admin" && this.password === "admin") {
+        Router.push("/home")
+      } else {
+      this.loginError = true
+      }
+
+    }
+  },
+
+  computed: {
+    ...mapState(["user", "password"])
+  },
 
   created() {
     const title = document.getElementById("window-title");
