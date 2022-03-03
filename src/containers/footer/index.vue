@@ -22,7 +22,7 @@
           <TextContent :level="1" text="navegando" />
         </div>
         <div class="logout">
-          <TextContent :level="1" text="Logout" />
+          <button @click="logout()">Logout</button>
         </div>
       </div>
     </div>
@@ -30,6 +30,7 @@
 </template>
 
 <script>
+import Router from "@/router/index.js"
 import Timer from "@/components/timer/index.vue"
 import TextContent from "@/components/text/index.vue";
 
@@ -38,6 +39,12 @@ export default {
     TextContent,
     Timer,
   },
+
+  methods: {
+    logout() {
+      Router.push("/login")
+    }
+  }
 };
 </script>
 
