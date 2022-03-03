@@ -12,7 +12,7 @@
           <TextContent :level="1" text="refresh in" />
         </div>
         <div class="timer-container">
-          <TextContent class="timer-number" text="600" />
+          <Timer />
           <TextContent :level="1" text="seconds" />
         </div>
       </div>
@@ -30,11 +30,13 @@
 </template>
 
 <script>
+import Timer from "@/components/timer/index.vue"
 import TextContent from "@/components/text/index.vue";
 
 export default {
   components: {
     TextContent,
+    Timer,
   },
 };
 </script>
