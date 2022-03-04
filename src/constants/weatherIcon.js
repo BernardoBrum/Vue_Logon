@@ -7,11 +7,11 @@ export function weatherIcon(text) {
       icon = "thunder.png";
     } else if (text.includes("rain") || text.includes("drizzle")) {
       icon = "raining.png";
-    } else if (text.includes("Fog") || text.includes("Mist")) {
+    } else if (text.includes("Fog") || text.includes("Mist") || text.includes("Clear")) {
       icon = "cloud.png";
     } else if (text.includes("cloudy") || text.includes("Overcast") || text.includes("Cloudy")) {
       icon = "cloudy.png";
-    } else if (text.includes("Sunny") || text.includes("Clear")) {
+    } else if (text.includes("Sunny")) {
       icon = "sun.png";
     }
     return icon;
