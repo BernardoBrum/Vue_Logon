@@ -2,7 +2,7 @@
   <div class="weather">
     <TextContent class="city" :text="showLocal" />
     <div class="weather-container">
-      <img draggable="false" :src="require(`@/assets/icons/${icon}`)" alt="Ícone Clima"/>
+      <img v-if="icon" draggable="false" :src="require(`@/assets/icons/${icon}`)" alt="Ícone Clima"/>
       <TextContent class="weather-title" :text="temperature" />
     </div>
   </div>
@@ -32,6 +32,8 @@ export default {
 
   methods: {
     weather() {
+      if (navigator.geolocation) {
+
       fetch(
         "https://api.weatherapi.com/v1/current.json?key=8eb8f003f8984fbe9a3172745220802&q=Carangola&aqi=no"
       )
@@ -58,8 +60,9 @@ export default {
             });
         });
       }
-    },
+    }
   },
+},
 
   created() {
     this.weather();

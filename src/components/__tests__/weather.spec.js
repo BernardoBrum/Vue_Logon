@@ -5,6 +5,6 @@ describe("Title component", () => {
   test("Teste 01", () => {
     const wrapper = shallowMount(Weather);
 
-    expect(wrapper.contains('div')).toBe(true);
+    expect(wrapper.contains("div")).toBe(true);
   });
 });
